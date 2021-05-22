@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://born2b.tres" type="DynamicFont" id=1]
+[ext_resource path="res://FirstScene.gd" type="Script" id=2]
+[ext_resource path="res://Button.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Born2bSportyV2.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.780392, 0.341176, 0.341176, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 164.855
+margin_top = 106.928
+margin_right = 214.855
+margin_bottom = 163.928
+custom_fonts/font = SubResource( 2 )
+text = "99"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 168.86
+margin_top = 220.389
+margin_right = 224.86
+margin_bottom = 277.389
+custom_fonts/font = SubResource( 2 )
+text = "99"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 302.344
+margin_top = 216.385
+margin_right = 358.344
+margin_bottom = 273.385
+custom_fonts/font = SubResource( 2 )
+text = "99"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 298.339
+margin_top = 116.272
+margin_right = 354.339
+margin_bottom = 173.272
+custom_fonts/font = SubResource( 2 )
+text = "99"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hi" type="Label" parent="."]
+margin_left = 352.398
+margin_top = 416.47
+margin_right = 392.398
+margin_bottom = 430.47
+custom_fonts/font = ExtResource( 1 )
+text = "EZ"
+__meta__ = {
+"_edit_use_anchors_": false
+}
