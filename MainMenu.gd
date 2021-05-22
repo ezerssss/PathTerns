@@ -1,7 +1,5 @@
 extends MarginContainer
 
-const first_scene = preload("res://FirstScene.tscn")
-
 onready var select_one = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/selector_one
 onready var select_two = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/selector_two
 onready var select_three = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer/selector_three
@@ -28,8 +26,7 @@ func _process(delta):
 
 func handle_selection(_current_selection):
 	if _current_selection == 0:
-		get_parent().add_child(first_scene.instance())
-		queue_free()
+		get_tree().change_scene("res://star_pattern.tscn")
 	elif _current_selection == 1:
 		print("HELLO WORLD")
 	else:

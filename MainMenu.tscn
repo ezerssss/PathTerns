@@ -32,31 +32,31 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 327.0
-margin_top = 139.0
-margin_right = 697.0
-margin_bottom = 460.0
+margin_left = 402.0
+margin_top = 159.0
+margin_right = 622.0
+margin_bottom = 440.0
 custom_constants/separation = 60
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 370.0
-margin_bottom = 100.0
+margin_right = 220.0
+margin_bottom = 60.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_right = 370.0
-margin_bottom = 100.0
+margin_right = 220.0
+margin_bottom = 60.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Pattherns"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 160.0
-margin_right = 370.0
-margin_bottom = 321.0
+margin_top = 120.0
+margin_right = 220.0
+margin_bottom = 281.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
-margin_left = 107.0
-margin_right = 262.0
+margin_left = 32.0
+margin_right = 187.0
 margin_bottom = 161.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
@@ -80,6 +80,7 @@ margin_left = 20.0
 margin_right = 155.0
 margin_bottom = 51.0
 rect_min_size = Vector2( 135, 0 )
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 3 )
 text = "Start"
 
@@ -104,6 +105,7 @@ text = ">"
 margin_left = 20.0
 margin_right = 155.0
 margin_bottom = 51.0
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 3 )
 text = "Options"
 
@@ -129,5 +131,6 @@ margin_left = 20.0
 margin_right = 155.0
 margin_bottom = 51.0
 rect_min_size = Vector2( 135, 0 )
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 3 )
 text = "Exit"

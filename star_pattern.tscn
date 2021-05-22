@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://born2b.tres" type="DynamicFont" id=1]
 [ext_resource path="res://FirstScene.gd" type="Script" id=2]
 [ext_resource path="res://Button.gd" type="Script" id=3]
+[ext_resource path="res://back.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Born2bSportyV2.ttf"
@@ -23,10 +24,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 164.855
-margin_top = 106.928
-margin_right = 214.855
-margin_bottom = 163.928
+margin_left = 438.855
+margin_top = 99.928
+margin_right = 494.855
+margin_bottom = 156.928
 custom_fonts/font = SubResource( 2 )
 text = "99"
 flat = true
@@ -36,10 +37,10 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 162.186
-margin_top = 220.389
-margin_right = 218.186
-margin_bottom = 277.389
+margin_left = 440.186
+margin_top = 216.389
+margin_right = 496.186
+margin_bottom = 273.389
 custom_fonts/font = SubResource( 2 )
 text = "99"
 flat = true
@@ -49,10 +50,10 @@ __meta__ = {
 }
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 294.335
-margin_top = 217.719
-margin_right = 350.335
-margin_bottom = 274.719
+margin_left = 575.335
+margin_top = 315.719
+margin_right = 631.335
+margin_bottom = 372.719
 custom_fonts/font = SubResource( 2 )
 text = "99"
 flat = true
@@ -62,10 +63,10 @@ __meta__ = {
 }
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 291.665
-margin_top = 109.597
-margin_right = 347.665
-margin_bottom = 166.597
+margin_left = 314.665
+margin_top = 317.597
+margin_right = 370.665
+margin_bottom = 374.597
 custom_fonts/font = SubResource( 2 )
 text = "99"
 flat = true
@@ -75,12 +76,27 @@ __meta__ = {
 }
 
 [node name="hi" type="Label" parent="."]
-margin_left = 352.398
-margin_top = 416.47
-margin_right = 392.398
-margin_bottom = 430.47
+margin_left = 921.045
+margin_top = 13.0
+margin_right = 999.045
+margin_bottom = 73.0
+grow_horizontal = 0
+rect_clip_content = true
 custom_fonts/font = ExtResource( 1 )
-text = "EZ"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="Button" parent="."]
+margin_left = 21.3575
+margin_top = 17.3529
+margin_right = 208.357
+margin_bottom = 93.3529
+custom_fonts/font = ExtResource( 1 )
+text = "GO BACK"
+flat = true
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

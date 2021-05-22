@@ -1,6 +1,7 @@
 extends Button
 
 var number = "NA"
+
 onready var root = get_parent()
 
 func _ready():
@@ -9,5 +10,4 @@ func _ready():
 func _pressed():
 	number = get_text()
 	print(number)
-	root.user_array.append(number)
-	root.call_from_child()
+	root.add_number(number)

@@ -8,6 +8,7 @@ onready var button_first = get_node("Button")
 onready var button_second = get_node("Button2")
 onready var button_third = get_node("Button3")
 onready var button_fourth = get_node("Button4")
+onready var hi = get_node("hi")
 
 func _ready():
 	rng.randomize()
@@ -24,5 +25,15 @@ func set_number():
 	number_array.append(number)
 	return str(number)
 
-func call_from_child():
-	print(user_array)
+func add_number(_number):
+	if _number in user_array:
+		user_array.erase(_number)
+	else:
+		user_array.append(_number)
+	if user_array.size() == 0:
+		hi.text = ""
+	else:
+		hi.text = str(user_array)
+		
+func main_menu():
+	get_tree().change_scene("res://MainMenu.tscn")
