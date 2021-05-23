@@ -1,8 +1,8 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
 [sub_resource type="DynamicFontData" id=1]
-font_path = "res://Born2bSportyV2.ttf"
+font_path = "res://resource/font/Born2bSportyV2.ttf"
 
 [resource]
-size = 60
+size = 125
 font_data = SubResource( 1 )
