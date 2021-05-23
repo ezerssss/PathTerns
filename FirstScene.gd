@@ -27,11 +27,7 @@ func set_number():
 
 func add_number(_number):
 	if _number in user_array:
-#		user_array.erase(_number)
-		while _number != user_array[len(user_array)-1]:
-			print('betch')
-			user_array.pop_back()
-		user_array.pop_back()
+		user_array.erase(_number)
 	else:
 		user_array.append(_number)
 	if user_array.size() == 0:
