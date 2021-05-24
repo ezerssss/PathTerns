@@ -1,9 +1,9 @@
 extends Button
 
-
 onready var subtext = get_node("Label")
-var color = [1.3, 1.5, 1.3]
-var color_hovered = [1.4, 1.7, 1.4]
+onready var root = get_tree().get_root().get_node("bg_play_menu")
+var color = [1.1, 1.1, 1.1]
+var color_hovered = [1.2, 1.1, 1.2]
 
 func _process(delta):
 	if self.is_hovered():
@@ -16,9 +16,9 @@ func _ready():
 
 func not_hovered():
 	subtext.add_color_override("font_color", Color(color[0],color[1],color[2]))
-
+	
 func hovered():
 	subtext.add_color_override("font_color", Color(color_hovered[0],color_hovered[1],color_hovered[2]))
 
 func _pressed():
-	get_tree().change_scene("res://scenes/play_menu.tscn")
+	root.transfer_scene(self.get_name())
