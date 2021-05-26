@@ -14,6 +14,10 @@ config/name="Pattherns"
 run/main_scene="res://scenes/main_menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+traversal="*res://traversal.gd"
+
 [display]
 
 window/size/width=1920
