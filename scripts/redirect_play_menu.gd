@@ -1,5 +1,6 @@
 extends TextureRect
 
+var modes = ["matrix.tscn", "star.tscn", "web.tscn"]
 
 func transfer_scene(_node):
 	if _node == "matrix":
@@ -9,4 +10,5 @@ func transfer_scene(_node):
 	elif _node == "web":
 		get_tree().change_scene("res://scenes/patterns/web.tscn")
 	else:
-		print("RANDOM")
+		modes.shuffle()
+		get_tree().change_scene("res://scenes/patterns/"+modes[0])

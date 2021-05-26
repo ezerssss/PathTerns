@@ -41,9 +41,9 @@ __meta__ = {
 }
 
 [node name="sound_logo" type="TextureRect" parent="CenterContainer2"]
-margin_left = 55.0
+margin_left = 54.0
 margin_top = 34.0
-margin_right = 118.0
+margin_right = 117.0
 margin_bottom = 78.0
 texture = ExtResource( 2 )
 
