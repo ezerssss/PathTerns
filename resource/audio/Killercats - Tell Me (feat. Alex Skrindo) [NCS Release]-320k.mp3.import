@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Killercats - Tell Me (feat. Alex Skrindo) [NCS Release]-320k.mp3-f7342654765ffd0b3fba47555708154d.mp3str"
+
+[deps]
+
+source_file="res://resource/audio/Killercats - Tell Me (feat. Alex Skrindo) [NCS Release]-320k.mp3"
+dest_files=[ "res://.import/Killercats - Tell Me (feat. Alex Skrindo) [NCS Release]-320k.mp3-f7342654765ffd0b3fba47555708154d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

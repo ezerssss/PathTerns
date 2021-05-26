@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Inukshuk - Too Far Gone [NCS Release].mp3-29818f1573f84375fe60c402081d193e.mp3str"
+
+[deps]
+
+source_file="res://resource/audio/Inukshuk - Too Far Gone [NCS Release].mp3"
+dest_files=[ "res://.import/Inukshuk - Too Far Gone [NCS Release].mp3-29818f1573f84375fe60c402081d193e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
