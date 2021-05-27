@@ -11,7 +11,7 @@ var button_array = []
 func _ready():
 	rng.randomize()
 	var num = rng.randi_range(0,99)
-	for x in range(12):
+	for x in range(10):
 		while num in array:
 			num = rng.randi_range(0,99)
 		array.append(num)
