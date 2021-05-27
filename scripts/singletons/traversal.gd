@@ -23,8 +23,9 @@ func dfs_rec(v, visited):
 func dfs(v):
 	var visited = []
 	dfs_rec(v, visited)
-	print(visited)
+	#print(visited)
 	print()
+	return visited
 
 func bfs_rec(v, visited, queue, order):
 	var arr = []

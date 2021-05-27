@@ -9,3 +9,6 @@ func _process(delta):
 		if root.array.size() > 0:
 			self.text = root.get_num()
 			have_text = true
+
+func _pressed():
+	root.add_num(int(self.text))
