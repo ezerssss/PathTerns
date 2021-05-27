@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Inukshuk - A World Away [NCS Release].mp3-65abcb84fe
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

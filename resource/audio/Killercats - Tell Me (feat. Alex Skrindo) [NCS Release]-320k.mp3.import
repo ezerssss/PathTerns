@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Killercats - Tell Me (feat. Alex Skrindo) [NCS Relea
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

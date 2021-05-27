@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Inukshuk - Happy Accidents [NCS Release]-320k.mp3-4c
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
