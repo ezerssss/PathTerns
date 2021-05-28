@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://resource/images/play_menu_images/bg_play_menu.png" type="Texture" id=1]
 [ext_resource path="res://resource/images/main_menu_images/mute_button.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://resource/images/play_menu_images/mini_star.png" type="Texture" id=12]
 [ext_resource path="res://resource/images/play_menu_images/mini_web.png" type="Texture" id=13]
 [ext_resource path="res://resource/images/play_menu_images/mini_random.png" type="Texture" id=14]
+[ext_resource path="res://scripts/ui_scripts/mode_selector.gd" type="Script" id=15]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -31,12 +32,19 @@ font_data = SubResource( 2 )
 font_path = "res://resource/font/Born2bSportyV2.ttf"
 
 [sub_resource type="DynamicFont" id=5]
-size = 100
+size = 80
 font_data = SubResource( 4 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://resource/font/Born2bSportyV2.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 100
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
 size = 90
-font_data = SubResource( 4 )
+font_data = SubResource( 6 )
 
 [sub_resource type="DynamicFontData" id=9]
 font_path = "res://resource/font/Born2bSportyV2.ttf"
@@ -45,12 +53,12 @@ font_path = "res://resource/font/Born2bSportyV2.ttf"
 size = 35
 font_data = SubResource( 9 )
 
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=11]
 font_path = "res://resource/font/Born2bSportyV2.ttf"
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=12]
 size = 45
-font_data = SubResource( 7 )
+font_data = SubResource( 11 )
 
 [node name="bg_play_menu" type="TextureRect"]
 margin_right = 40.0
@@ -123,6 +131,23 @@ margin_top = 49.0
 margin_right = 1848.0
 margin_bottom = 63.0
 
+[node name="mode_selector" type="Button" parent="."]
+margin_left = 902.0
+margin_top = 12.0
+margin_right = 1019.0
+margin_bottom = 98.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_hover = Color( 1.2, 1.2, 1.2, 1 )
+enabled_focus_mode = 0
+text = "DFS"
+flat = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="pattern_container" type="VBoxContainer" parent="."]
 margin_left = 52.0
 margin_top = 150.0
@@ -161,7 +186,7 @@ texture = ExtResource( 11 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 flat = true
 script = ExtResource( 7 )
 __meta__ = {
@@ -174,7 +199,7 @@ margin_left = 43.4165
 margin_top = 255.175
 margin_right = 281.416
 margin_bottom = 355.175
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "Matrix"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -185,6 +210,7 @@ margin_left = 650.0
 margin_top = 290.0
 margin_right = 818.0
 margin_bottom = 330.0
+grow_horizontal = 0
 custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.909804, 0.839216, 0.105882, 1 )
 text = "Best Time: NA"
@@ -216,7 +242,7 @@ texture = ExtResource( 12 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 flat = true
 script = ExtResource( 7 )
 __meta__ = {
@@ -229,7 +255,7 @@ margin_left = 43.4165
 margin_top = 255.175
 margin_right = 281.416
 margin_bottom = 355.175
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "Star"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -240,6 +266,7 @@ margin_left = 650.0
 margin_top = 290.0
 margin_right = 818.0
 margin_bottom = 330.0
+grow_horizontal = 0
 custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.909804, 0.839216, 0.105882, 1 )
 text = "Best Time: NA"
@@ -276,7 +303,7 @@ texture = ExtResource( 13 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 flat = true
 script = ExtResource( 7 )
 __meta__ = {
@@ -289,7 +316,7 @@ margin_left = 43.4165
 margin_top = 255.175
 margin_right = 281.416
 margin_bottom = 355.175
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "Web"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -300,6 +327,7 @@ margin_left = 650.0
 margin_top = 290.0
 margin_right = 818.0
 margin_bottom = 330.0
+grow_horizontal = 0
 custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.909804, 0.839216, 0.105882, 1 )
 text = "Best Time: NA"
@@ -331,7 +359,7 @@ texture = ExtResource( 14 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 flat = true
 script = ExtResource( 7 )
 __meta__ = {
@@ -344,7 +372,7 @@ margin_left = 43.4165
 margin_top = 255.175
 margin_right = 319.416
 margin_bottom = 355.175
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "Random"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -366,7 +394,7 @@ margin_left = 150.0
 margin_top = 33.0
 margin_right = 588.0
 margin_bottom = 79.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 12 )
 text = "LOREM IPSUM LOREM IPSUM"
 __meta__ = {
 "_edit_use_anchors_": false

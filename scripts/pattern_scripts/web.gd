@@ -4,18 +4,16 @@ var rng = RandomNumberGenerator.new()
 
 onready var timer_label = get_node("timer")
 onready var label = get_node("sound_container/song_label")
+onready var moves_label = get_node("sidebar/moves")
+
+var time = 0
+var timer_on = false
 
 var array = []
 var button_array = []
 var graph = {}
 var user_array = []
-func create_graph(array):
-	for i in array:
-		graph[i] = []
 var order = []
-
-var time = 0
-var timer_on = false
 
 
 func _ready():
@@ -29,7 +27,6 @@ func _ready():
 		button_array.append(num)
 	create_graph(array)
 	traversal.create_graph(graph)
-	print(array)
 	traversal.add_edge(array[0], array[1])
 	traversal.add_edge(array[0], array[2])
 	traversal.add_edge(array[0], array[3])
@@ -48,9 +45,12 @@ func _ready():
 	traversal.add_edge(array[10], array[3])
 	traversal.add_edge(array[9], array[11])
 	traversal.add_edge(array[10], array[11])
-	print(traversal.graph)
-	order = traversal.dfs(array[0])
+	if data_handler.get_mode() == "DFS":
+		order = traversal.dfs(array[0])
+	else:
+		order = traversal.bfs(array[0])
 	print(order)
+
 
 func _process(delta):
 	var current_song = music_handler.get_name()
@@ -65,10 +65,18 @@ func _process(delta):
 	var time_passed = "%02d : %02d : %03d" % [mins, secs, mils]
 	timer_label.text = time_passed
 
+
+func create_graph(array):
+	for i in array:
+		graph[i] = []
+
+
 func get_num():
 	var num = button_array[0]
 	button_array.pop_front()
 	return str(num)
+
+var leaderboard = "res://saved_data/leaderboards.txt"
 
 func add_num(num):
 	if num in user_array:
@@ -78,9 +86,43 @@ func add_num(num):
 	print(user_array)
 	if len(user_array) == 12:
 		if user_array == order:
-			print('yey!')
 			timer_on = false
+			reset_time()
 		else:
 			_process(5)
-			print('wrong!')
-			#punishment lods
+			timer_label.set("custom_colors/font_color", Color("ff0000"))		
+			yield(get_tree().create_timer(0.15), "timeout")
+			timer_label.set("custom_colors/font_color", Color("ffffff"))
+			user_array.clear()
+			moves()
+
+
+func moves():
+	var text = ""
+	for move in user_array:
+		text += str(move) + "\n"
+	moves_label.text = text
+
+
+func reset_time():
+	time = 0
+	time = 0
+	array.clear()
+	button_array.clear()
+	graph.clear()
+	user_array.clear()
+	self._ready()
+	self.moves()
+	get_node("Button").text = ""
+	get_node("Button2").text = ""
+	get_node("Button3").text = ""
+	get_node("Button4").text = ""
+	get_node("Button5").text = ""
+	get_node("Button6").text = ""
+	get_node("Button7").text = ""
+	get_node("Button8").text = ""
+	get_node("Button9").text = ""
+	get_node("Button10").text = ""
+	get_node("Button11").text = ""
+	get_node("Button12").text = ""
+	timer_on = true
